@@ -1,3 +1,9 @@
+# Custom Marlin 3D Printer Firmware
+
+Fork of Marlin Firmware configured for our FolgerTech RepRap Prusa i3 kit (clear frame, ramps, gt2, from 2014). Printer documentation [here](https://drive.google.com/drive/folders/0B9b1NbuMK524M1JFM0IyNm4xOHc?resourcekey=0-2qOdbSO3ikLTZzkuI6Dsig&usp=sharing).
+
+---
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
