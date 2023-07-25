@@ -1,5 +1,12 @@
 <p align="center"><img src="buildroot/share/pixmaps/logo/marlin-outrun-nf-500.png" height="250" alt="MarlinFirmware's logo" /></p>
 
+<h1 align="center"> Custom Marlin 3D Printer Firmware</h1>
+
+Fork of Marlin Firmware configured for our FolgerTech RepRap Prusa i3 kit (clear frame, ramps, gt2, from 2014). Printer documentation [here](https://drive.google.com/drive/folders/0B9b1NbuMK524M1JFM0IyNm4xOHc?resourcekey=0-2qOdbSO3ikLTZzkuI6Dsig&usp=sharing).
+
+---
+
+
 <h1 align="center">Marlin 3D Printer Firmware</h1>
 
 <p align="center">
@@ -38,25 +45,25 @@ Marlin 2.0 introduced a layer of abstraction to allow all the existing high-leve
 
 ### Supported Platforms
 
-  Platform|MCU|Example Boards
-  --------|---|-------
-  [Arduino AVR](https://www.arduino.cc/)|ATmega|RAMPS, Melzi, RAMBo
-  [Teensy++ 2.0](https://www.microchip.com/en-us/product/AT90USB1286)|AT90USB1286|Printrboard
-  [Arduino Due](https://www.arduino.cc/en/Guide/ArduinoDue)|SAM3X8E|RAMPS-FD, RADDS, RAMPS4DUE
-  [ESP32](https://github.com/espressif/arduino-esp32)|ESP32|FYSETC E4, E4d@BOX, MRR
-  [LPC1768](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/512-kb-flash-64-kb-sram-ethernet-usb-lqfp100-package:LPC1768FBD100)|ARM® Cortex-M3|MKS SBASE, Re-ARM, Selena Compact
-  [LPC1769](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/512-kb-flash-64-kb-sram-ethernet-usb-lqfp100-package:LPC1769FBD100)|ARM® Cortex-M3|Smoothieboard, Azteeg X5 mini, TH3D EZBoard
-  [STM32F103](https://www.st.com/en/microcontrollers-microprocessors/stm32f103.html)|ARM® Cortex-M3|Malyan M200, GTM32 Pro, MKS Robin, BTT SKR Mini
-  [STM32F401](https://www.st.com/en/microcontrollers-microprocessors/stm32f401.html)|ARM® Cortex-M4|ARMED, Rumba32, SKR Pro, Lerdge, FYSETC S6, Artillery Ruby
-  [STM32F7x6](https://www.st.com/en/microcontrollers-microprocessors/stm32f7x6.html)|ARM® Cortex-M7|The Borg, RemRam V1
-  [STM32G0B1RET6](https://www.st.com/en/microcontrollers-microprocessors/stm32g0x1.html)|ARM® Cortex-M0+|BigTreeTech SKR mini E3 V3.0
-  [STM32H743xIT6](https://www.st.com/en/microcontrollers-microprocessors/stm32h743-753.html)|ARM® Cortex-M7|BigTreeTech SKR V3.0, SKR EZ V3.0, SKR SE BX V2.0/V3.0
-  [SAMD51P20A](https://www.adafruit.com/product/4064)|ARM® Cortex-M4|Adafruit Grand Central M4
-  [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)|ARM® Cortex-M4|
-  [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)|ARM® Cortex-M4|
-  [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)|ARM® Cortex-M7|
-  [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)|ARM® Cortex-M7|
-  Linux Native|x86/ARM/etc.|Raspberry Pi
+  | Platform                                                                                                                                                                                               | MCU             | Example Boards                                             |
+  | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- | ---------------------------------------------------------- |
+  | [Arduino AVR](https://www.arduino.cc/)                                                                                                                                                                 | ATmega          | RAMPS, Melzi, RAMBo                                        |
+  | [Teensy++ 2.0](https://www.microchip.com/en-us/product/AT90USB1286)                                                                                                                                    | AT90USB1286     | Printrboard                                                |
+  | [Arduino Due](https://www.arduino.cc/en/Guide/ArduinoDue)                                                                                                                                              | SAM3X8E         | RAMPS-FD, RADDS, RAMPS4DUE                                 |
+  | [ESP32](https://github.com/espressif/arduino-esp32)                                                                                                                                                    | ESP32           | FYSETC E4, E4d@BOX, MRR                                    |
+  | [LPC1768](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/512-kb-flash-64-kb-sram-ethernet-usb-lqfp100-package:LPC1768FBD100) | ARM® Cortex-M3  | MKS SBASE, Re-ARM, Selena Compact                          |
+  | [LPC1769](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-cortex-m3/512-kb-flash-64-kb-sram-ethernet-usb-lqfp100-package:LPC1769FBD100) | ARM® Cortex-M3  | Smoothieboard, Azteeg X5 mini, TH3D EZBoard                |
+  | [STM32F103](https://www.st.com/en/microcontrollers-microprocessors/stm32f103.html)                                                                                                                     | ARM® Cortex-M3  | Malyan M200, GTM32 Pro, MKS Robin, BTT SKR Mini            |
+  | [STM32F401](https://www.st.com/en/microcontrollers-microprocessors/stm32f401.html)                                                                                                                     | ARM® Cortex-M4  | ARMED, Rumba32, SKR Pro, Lerdge, FYSETC S6, Artillery Ruby |
+  | [STM32F7x6](https://www.st.com/en/microcontrollers-microprocessors/stm32f7x6.html)                                                                                                                     | ARM® Cortex-M7  | The Borg, RemRam V1                                        |
+  | [STM32G0B1RET6](https://www.st.com/en/microcontrollers-microprocessors/stm32g0x1.html)                                                                                                                 | ARM® Cortex-M0+ | BigTreeTech SKR mini E3 V3.0                               |
+  | [STM32H743xIT6](https://www.st.com/en/microcontrollers-microprocessors/stm32h743-753.html)                                                                                                             | ARM® Cortex-M7  | BigTreeTech SKR V3.0, SKR EZ V3.0, SKR SE BX V2.0/V3.0     |
+  | [SAMD51P20A](https://www.adafruit.com/product/4064)                                                                                                                                                    | ARM® Cortex-M4  | Adafruit Grand Central M4                                  |
+  | [Teensy 3.5](https://www.pjrc.com/store/teensy35.html)                                                                                                                                                 | ARM® Cortex-M4  |
+  | [Teensy 3.6](https://www.pjrc.com/store/teensy36.html)                                                                                                                                                 | ARM® Cortex-M4  |
+  | [Teensy 4.0](https://www.pjrc.com/store/teensy40.html)                                                                                                                                                 | ARM® Cortex-M7  |
+  | [Teensy 4.1](https://www.pjrc.com/store/teensy41.html)                                                                                                                                                 | ARM® Cortex-M7  |
+  | Linux Native                                                                                                                                                                                           | x86/ARM/etc.    | Raspberry Pi                                               |
 
 ## Submitting Patches
 
